@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Organda - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Organda Outro</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    ORGANDA OUTRO
+                    <br><br>
+                    Pour cette exploration typographique en duo, nous sommes partis du caractère
+ORGANDA, dessiné par Franz Heigemeir en 1972 et adopté par Mecanorma en trois
+graisses. Bien qu’un revival numérique, Organ Grinder, ait vu le jour en 2019,
+son étendue de glyphes reste limitée au regard des enjeux actuels d’inclusivité
+de la langue.
+                    <br><br>
+                  Notre démarche ne visait pas à reproduire ORGANDA, mais à le manipuler et
+l’interpréter, en développant de nouveaux glyphes à partir de ses formes
+originelles. Le projet s’est concentré sur le travail de la ligature, avec la
+création de combinaisons fluides et expressives, notamment pour certains phonèmes
+et digrammes. Cette recherche a permis d’explorer des formes issues de la
+typographie inclusive, enrichissant l’écriture sans en rompre la lisibilité.
+                    <br><br>
+                 Intitulé ORGANDA OUTRO, ce projet se présente comme un fork display des deux fontes
+d’origines, proposant une extension graphique et inclusive du caractère. Nous avons
+exploré différentes chasses et dessins de lettres, tout en respectant les principes
+qui font la signature d’ORGANDA : un caractère unicaméral, à la géométrie simple et
+affirmée.
+                    <br><br>
+                 Notre travail s’inscrit dans une
+esthétique géométrique et épurée,
+empruntant à l’Art déco et s’appuie
+sur un système de grille structurant nos
+expérimentations tout en laissant place
+à une liberté formelle.
+Le caractère donne naissance à deux
+variantes : Riff, condensée et rigoureuse,
+et Improv, plus expressive et émancipée.
+Ces deux écritures enrichissent le rythme
+visuel et renforcent le lien entre formes
+et sonorités, invitant les graphistes à
+composer librement, à la manière
+d’un musicien de jazz.
+<br><br>
+2025
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="organda-1.jpg" alt="">
+                <img src="organda-2.jpg" alt="">
+                <img src="organda-3.jpg" alt="">
+                <img src="organda-4.jpg" alt="">
+                <img src="organda-5.jpg" alt="">
+                <img src="organda-6.jpg" alt="">
+                <img src="organda-7.jpg" alt="">
+                <img src="organda-8.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                <img src="organda-9.jpg" alt="">
+                <img src="organda-10.jpg" alt="">
+                <img src="organda-11.jpg" alt="">
+                <img src="organda-12.jpg" alt="">
+                <img src="organda-13.jpg" alt="">
+                <img src="organda-14.jpg" alt="">
+                <img src="organda-15.jpg" alt="">
+                <img src="organda-16.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

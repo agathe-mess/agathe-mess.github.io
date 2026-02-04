@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Galerie - Agathe Meslem</title>
+</head>
+<body class="projects-page gallery-page">
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+    
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Galerie</h2>
+        </section>
+
+        <!-- Grille de galerie moderne -->
+        <section class="photo-gallery">
+            <div class="gallery-grid">
+                <!-- Grande image verticale -->
+                <div class="gallery-photo tall">
+                    <img src="1.jpg" alt="Photo 1">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Image carrée -->
+                <div class="gallery-photo square">
+                    <img src="2.jpg" alt="Photo 2">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Image horizontale -->
+                <div class="gallery-photo wide">
+                    <img src="3.jpg" alt="Photo 3">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Image carrée -->
+                <div class="gallery-photo square">
+                    <img src="4.jpg" alt="Photo 4">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Grande image verticale -->
+                <div class="gallery-photo tall">
+                    <img src="5.jpg" alt="Photo 5">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Image horizontale -->
+                <div class="gallery-photo wide">
+                    <img src="6.jpg" alt="Photo 6">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Image carrée -->
+                <div class="gallery-photo square">
+                    <img src="7.jpg" alt="Photo 7">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2025</span>
+                    </div>
+                </div>
+
+                <!-- Image carrée -->
+                <div class="gallery-photo square">
+                    <img src="1-2.jpg" alt="Photo 8">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2023</span>
+                    </div>
+                </div>
+
+                <!-- Grande image verticale -->
+                <div class="gallery-photo tall">
+                    <img src="DSC05388.jpg" alt="Photo 9">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2024</span>
+                    </div>
+                </div>
+
+                <!-- Image horizontale -->
+                <div class="gallery-photo wide">
+                    <img src="DSC07373.jpg" alt="Photo 10">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2024</span>
+                    </div>
+                </div>
+
+                <!-- Image carrée -->
+                <div class="gallery-photo square">
+                    <img src="DSC07441-2.jpg" alt="Photo 11">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2024</span>
+                    </div>
+                </div>
+
+                <!-- Image carrée -->
+                <div class="gallery-photo square">
+                    <img src="DSC07482.jpg" alt="Photo 12">
+                    <div class="photo-overlay">
+                        <span class="photo-year">2024</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="contact-footer">
+        <p class="copyright">© 2025</p>
+        <div class="contact-info">
+            <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+            <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-close" id="lightbox-close"></div>
+        <div class="lightbox-prev" id="lightbox-prev">&#8249;</div>
+        <div class="lightbox-next" id="lightbox-next">&#8250;</div>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+
+    <!-- Menu overlay -->
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+
+        // Animation au survol des photos
+        const galleryPhotos = document.querySelectorAll('.gallery-photo');
+        
+        galleryPhotos.forEach(photo => {
+            photo.addEventListener('mouseenter', () => {
+                photo.querySelector('.photo-overlay').style.opacity = '1';
+            });
+            
+            photo.addEventListener('mouseleave', () => {
+                photo.querySelector('.photo-overlay').style.opacity = '0';
+            });
+        });
+
+        // === LIGHTBOX ===
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const lightboxPrev = document.getElementById('lightbox-prev');
+        const lightboxNext = document.getElementById('lightbox-next');
+        
+        let currentPhotoIndex = 0;
+        const allPhotos = Array.from(galleryPhotos);
+
+        // Ouvrir la lightbox au clic sur une photo
+        galleryPhotos.forEach((photo, index) => {
+            photo.addEventListener('click', () => {
+                currentPhotoIndex = index;
+                showImage(currentPhotoIndex);
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Afficher une image spécifique
+        function showImage(index) {
+            const img = allPhotos[index].querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+        }
+
+        // Navigation précédente
+        lightboxPrev.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentPhotoIndex = (currentPhotoIndex - 1 + allPhotos.length) % allPhotos.length;
+            showImage(currentPhotoIndex);
+        });
+
+        // Navigation suivante
+        lightboxNext.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentPhotoIndex = (currentPhotoIndex + 1) % allPhotos.length;
+            showImage(currentPhotoIndex);
+        });
+
+        // Fermer la lightbox en cliquant sur le fond
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Fermer la lightbox avec le bouton de fermeture
+        lightboxClose.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Navigation au clavier
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (e.key === 'Escape') {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            } else if (e.key === 'ArrowLeft') {
+                currentPhotoIndex = (currentPhotoIndex - 1 + allPhotos.length) % allPhotos.length;
+                showImage(currentPhotoIndex);
+            } else if (e.key === 'ArrowRight') {
+                currentPhotoIndex = (currentPhotoIndex + 1) % allPhotos.length;
+                showImage(currentPhotoIndex);
+            }
+        });
+    </script>
+</body>
+</html>

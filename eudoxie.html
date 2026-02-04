@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Eudoxie - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Eudoxie</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    EUDOXIE
+                    <br><br>
+                    J'ai réalisé un travail typographique et d'identité visuelle dans le cadre d'un
+workshop mené au FRAC Picardie par la graphiste Sophie Cure, prenant appui sur le
+livre « Les Villes invisibles » d'Italo Calvino.
+Envisagé comme un exercice de style autour de la ville, le projet consistait à
+choisir l'une des cités du récit et à en imaginer le langage graphique, à travers
+une réflexion sur les notions de règle, de variation et de système, essentielles à
+la construction d'une identité visuelle. Ce travail a permis d'explorer
+la conception d'un langage graphique autonome, s'affranchissant du modèle
+alphabétique traditionnel et de considérer l'écriture comme un dispositif
+plastique et conceptuel à part entière.
+                    <br><br>
+                   Je me suis donc intéressée à la ville d'Eudoxie, qui se distingue notamment par
+l'existence d'une carte-tapis, cartographiant toute la ville. Cela nous ouvrait
+donc la voie vers une perspective liée au textile, à l'ornement, à la répétition
+formelle et au motif.
+                    <br><br>
+                 J'ai pu ainsi prendre exemple des tapis berbère, du tissu Kilim de Turquie mais aussi
+à des références typographique qui s'éloigne des conventions alphabétique comme
+le codex seraphinianus, le manuscrit de voynich, la typographie bubune de fanette
+mellier, l'alphabet plastique d'Auguste Herbin ou encore les pavages de Sébastien
+Truchet.
+                    <br><br>
+                 Ma typographie s'inscrit ainsi dans des espaces définis par une grille pour renforcer
+l'idée de motif textile, afin que le texte forme un ensemble indissociable et une
+cohérence formelle et rythmique. Sa structure repose sur un principe de lecture
+verticale, de haut en bas, organisé selon un mouvement ondulatoire alternant les
+directions, de manière à produire une continuité visuelle proche de celle d'un tapis.
+Cette logique induit une lecture mouvante, davantage fondée sur le parcours du regard
+que sur la déchiffrabilité immédiate du texte.
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="eudoxie-1.jpg" alt="">
+                <img src="eudoxie-2.jpg" alt="">
+                <img src="eudoxie-3.jpg" alt="">
+                <img src="eudoxie-4.jpg" alt="">
+                <img src="eudoxie-5.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                <img src="eudoxie-6.jpg" alt="">
+                <img src="eudoxie-7.jpg" alt="">
+                <img src="eudoxie-8.jpg" alt="">
+                <img src="eudoxie-9.jpg" alt="">
+                <img src="eudoxie-10.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

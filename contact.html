@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>CONTACT - Mess</title>
+</head>
+<body class="projects-page">
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+    
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Contact</h2>
+        </section>
+
+        <!-- Section Contact Détaillée -->
+        <section class="contacte-body">
+            <div class="contacte-grid">
+                <!-- Colonne Offline -->
+                <div class="contacte-column">
+                    <h3 class="contacte-category">Offline</h3>
+                    <div class="contacte-items">
+                        <div class="contacte-item">
+                            <span class="contacte-label">Based in</span>
+                            <span class="contacte-value">France, <br></br>
+                                Paris / Amiens</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne Online -->
+                <div class="contacte-column">
+                    <h3 class="contacte-category">Online</h3>
+                    <div class="contacte-items">
+                        <div class="contacte-item">
+                            <span class="contacte-label">Design media</span>
+                            <span class="contacte-value"><a href="https://instagram.com/_mess.u" target="_blank">@_mess.u</a></span>
+                        </div>
+                        <div class="contacte-item">
+                            <span class="contacte-label">Website</span>
+                            <span class="contacte-value"><a href="index.html" target="_blank">here</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne Reach me by -->
+                <div class="contacte-column">
+                    <h3 class="contacte-category">Reach me by</h3>
+                    <div class="contacte-items">
+                        <div class="contacte-item">
+                            <span class="contacte-label">Email</span>
+                            <span class="contacte-value"><a href="mailto:agathemeslem@outlook.fr">agathemeslem@outlook.fr</a></span>
+                        </div>
+                        <div class="contacte-item">
+                            <span class="contacte-label">LinkedIn</span>
+                            <span class="contacte-value"><a href="https://www.linkedin.com/in/agathe-meslem-0261b92b2/" target="_blank">LinkedIn</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuClose = document.querySelector('.menu-close');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const siteTitle = document.getElementById('site-title');
+    
+    menuToggle.addEventListener('click', () => {
+        menuOverlay.classList.add('active');
+    });
+    
+    menuClose.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+    });
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 2) {
+            siteTitle.classList.add('hidden');
+        } else {
+            siteTitle.classList.remove('hidden');
+        }
+    });
+    </script>
+</body>
+</html>

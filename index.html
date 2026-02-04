@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>PORTFOLIO - Mess</title>
+</head>
+<body>
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+    
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Portfolio numérique étudiante en <span class="highlight">design graphique et numérique</span>. Identité visuelle, édition, typographie, photographie, web design...
+            </h2>
+        </section>
+        
+        <section class="red-section" id="red-section">
+            <div class="banner">
+                <img src="banniere.jpg" alt="Bannière portfolio">
+                <div class="banner-circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <h2 class="hero-text"><span class="highlight">Mon travail graphique s'oriente avant tout autour de la narration, la poésie 
+visuelle et le rythme donné sur l'ensemble des projets. à l'image du conte, 
+j'y explore des questionnements, des sensations, je tente de toucher à l'intime 
+même pour des projets plus terre-à-terre ou très cadrés.
+Mon champs de référence est assez ouvert, mais mes inspirations puisent surtout dans la littérature. Mes projets naissent souvent d'un récit, d'un texte, d'une écriture. Mais je m'intéresse également à la cartographie pour structurer l'information et imaginer le pacours du spectateur, sa façon de s'approprier 
+le projet. 
+Je m'appuie aussi aux notions de l'intime, la psychologie et la psychanalyse, l'art brut et les pratiques marginales, les sciences humaines, la philosophie, l'observation du vivant, l'art textile et la topographie. 
+Ma pratique se concentre pour le moment autour de l'éditorial, l'identité 
+visuelle, la typographie et la photographie, mais étant très ouverte à l'expérimentation, j'ai ainsi pu toucher au textile, à la vidéo ainsi qu'au 
+web design.
+</span>
+            </h2>
+            
+            <div class="gallery">
+                <a href="galerie.html" class="gallery-item">
+                    <img src="pa.jpg" alt="Contact">
+                </a>
+                <a href="projects.html" class="gallery-item">
+                    <img src="pb.jpg" alt="Projects">
+                </a>
+                <a href="text.html" class="gallery-item">
+                    <img src="pc.jpg" alt="About">
+                </a>
+            </div>
+            <h2 class="hero-text"><span class="highlight">Ce portfolio présente un éventail représentatif de projets en Design graphique, mêlant narration, expérimentations variées et 
+identités visuelles
+</span>
+            </h2>
+            <div class="blue-line"></div>
+                        <div class="white-line"></div>
+                                    <div class="blue2-line"></div>
+        </section>
+        
+        <section class="white-section">
+        </section>
+    </main>
+    
+    <footer class="contact-footer">
+        <div class="copyright">© Agathe Meslem 2026</div>
+        <div class="contact-info">
+            <p><a href="mailto:agathemeslem@outlook.fr">agathemeslem@outlook.fr</a></p>
+            <p><a href="https://instagram.com/_mess.u" target="_blank">Instagram</a></p>
+            <p><a href="https://www.linkedin.com/in/agathe-meslem-0261b92b2/" target="_blank">LinkedIn</a></p>
+        </div>
+    </footer>
+    
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuClose = document.querySelector('.menu-close');
+    const menuOverlay = document.querySelector('.menu-overlay');
+    const siteTitle = document.getElementById('site-title');
+    const redSection = document.getElementById('red-section');
+    
+    menuToggle.addEventListener('click', () => {
+        menuOverlay.classList.add('active');
+    });
+    
+    menuClose.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
+    });
+    
+    // Faire disparaître le nom au scroll et changer la couleur du bouton menu
+    window.addEventListener('scroll', () => {
+        // Disparition du titre
+        if (window.scrollY > 2) {
+            siteTitle.classList.add('hidden');
+        } else {
+            siteTitle.classList.remove('hidden');
+        }
+        
+        // Changement de couleur du bouton menu
+        const redSectionTop = redSection.offsetTop;
+        const menuToggleBottom = menuToggle.getBoundingClientRect().bottom;
+        
+        if (window.scrollY + menuToggleBottom >= redSectionTop) {
+            menuToggle.classList.add('on-red');
+        } else {
+            menuToggle.classList.remove('on-red');
+        }
+    });
+    </script>
+</body>
+</html>

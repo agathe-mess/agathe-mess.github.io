@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Morpho - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Morphogénèse</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    MORPHOGÉNÈSE
+                    <br><br>
+                    Développement d’un système génératif, l’idée était de travailler autour d’une plante
+dont les racines formeraient un enchevêtrement de tracés croisés, comme un labyrinthe
+organique. Je suis finalement arrivée à un motif oscillant entre le végétal et une
+figure d’insecte. J’ai donc, à partir de ce motif, imaginé une mise en espace dans
+des affiches et jaquettes de livre.
+                    <br><br>
+Pour enrichir le système génératif, j’ai ajouté plusieurs paramètres interactifs.
+Le déplacement de la souris, de la droite vers la gauche, permet de modifier la
+densité des lignes et la courbure des formes. Ainsi, selon la position du curseur,
+le motif devient soit très souple et organique, soit plus géométrique et anguleux.
+J’ai également intégré des curseurs pour contrôler la couleur du fond et celle des
+racines, afin d’offrir davantage de variations possibles et de mieux explorer les
+ambiances graphiques que le motif pouvait produire.
+                    <br><br>
+                    2026
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="morpho-1.jpg" alt="">
+                <img src="morpho-2.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+            <img src="morpho-3.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

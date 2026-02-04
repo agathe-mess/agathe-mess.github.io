@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mécanique - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Mécanique du geste</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    MECANIQUE DU GESTE
+                    <br><br>
+                   Dans le cadre du salon de la micro édition Ping-Pong organisé au FRAC Picardie, j’ai
+pu réaliser un travail abordant le doodling. Il s’agit de l’ensemble des dessins
+spontanés, gribouillages, que l’on effectue sans vraiment réfléchir, lorsqu’on
+libère nos émotions sans mettre de barrière entre notre cerveau et notre main. Des
+gribouillages qui ne cherchent pas la perfection, au contraire, ils ne représentent
+parfois absolument rien de concret et pourtant ils peuvent dire de nous beaucoup de
+chose.
+                    <br><br>
+                   L’édition s’articule autour de quatre états du geste et de l’esprit. Tout d’abord
+l’ennui, quand la main gribouille machinalement pour passer le temps. Puis vient la
+rêverie, où les formes se font légères, flottantes, presque abstraites.
+Peu à peu, le geste se resserre dans l’obsession, répétant les mêmes motifs jusqu’à
+l’envahissement. Enfin surgit l’anxiété, où le trait devient nerveux, serré, saturé,
+comme si le papier ne suffisait plus à contenir la pensée.
+                    <br><br>
+                 Pour prolonger ce principe de spontanéité,
+l’édition inclus des textes en écriture
+automatique pour créer des ponts, une
+continuité entre le visuel et le verbal.
+                    <br><br>
+                    2026
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="méca-1.jpg" alt="">
+                <img src="méca-2.jpg" alt="">
+                <img src="méca-3.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                <img src="méca-5.jpg" alt="">
+                <img src="méca-6.jpg" alt="">
+                <img src="méca-4.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
