@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>TEXT - Mess</title>
+</head>
+
+<body class="projects-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Textes</h2>
+        </section>
+
+        <section class="projects-list">
+                 <a href="Artbrut.pdf" class="project-line">
+                <span class="project-date">2025</span>
+                <span class="project-category">essai</span>
+                <span class="project-title">Art marginal : expression de l'inconscient</span>
+            </a>
+
+                    <a href="carte-du-tendre.jpg" class="project-line">
+                <span class="project-date">2026</span>
+                <span class="project-category">mémoire</span>
+                <span class="project-title">Atlas de l'invisible : une cartographie de l'intériorité</span>
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="contact-footer">
+        <div class="copyright">© Agathe Meslem 2026</div>
+        <div class="contact-info">
+            <p><a href="mailto:agathemeslem@outlook.fr">agathemeslem@outlook.fr</a></p>
+            <p><a href="https://instagram.com/_mess.u" target="_blank">Instagram</a></p>
+            <p><a href="https://www.linkedin.com/in/agathe-meslem-0261b92b2/" target="_blank">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

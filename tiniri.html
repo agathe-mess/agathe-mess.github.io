@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tiniri - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Tiniri</h2>
+        </section>
+
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    TINIRI
+                    <br><br>
+                    Travail d’identité visuelle autour d’une marque fictive de bijouterie. Tiniri serait
+une bijouterie de luxe proposant des bijoux éphémères en sable. Ces créations sont
+conçues pour s’effriter avec le temps, afin de symboliser la beauté de l’instant et
+l’impermanence des choses.
+Les choix graphiques pour l’ensemble de la marque sont motivés par la volonté de
+garder une simplicité, l’idée de la disparition, les origines sahariennes de la
+marque, ainsi que par le sable. De ce fait, le travail typographique pour la baseline
+« Inclination friable » et pour les packagings évoque la disparition du bijou tout en
+restant sobre.
+                    <br><br>
+                 2024
+                    <br><br>
+                 
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="tin-1.jpg" alt="">
+                <img src="tin-2.jpg" alt="">
+                <img src="tin-3.jpg" alt="">
+                <img src="tin-4.jpg" alt="">
+                <img src="tin-5.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                <img src="tin-6.jpg" alt="">
+                <img src="tin-7.jpg" alt="">
+                <img src="tin-8.jpg" alt="">
+                <img src="tin-9.jpg" alt="">
+                <img src="tin-10.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

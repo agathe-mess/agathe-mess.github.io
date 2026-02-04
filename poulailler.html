@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Poulailler - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Au poulailler</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    AU POULAILLER
+                    <br><br>
+                    Travail d’édition et de broderie autour de la nouvelle de Franz Kafka, « Au
+Poulailler ». L’idée était d’illustrer le texte en proposant une vision nouvelle du
+récit.
+À travers l’illustration, j’ai souhaité mettre en avant le spectateur qui assiste à
+la scène se déroulant sous ses yeux et tenter, par la couture, de transmettre ses
+ressentis et son angoisse grandissante au fil de l’histoire.
+                    <br><br>
+                   La broderie apporte ici un aspect de douceur et de simplicité, tout en évoquant
+l’enfance et l’insouciance du monde du cirque, contrastant ainsi avec l’expérience
+vécue par le spectateur.
+                    <br><br>
+                 2025
+                    <br><br>
+                 
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="poul-1.jpg" alt="">
+                <img src="poul-2.jpg" alt="">
+                <img src="poul-3.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                <img src="poul-4.jpg" alt="">
+                <img src="poul-5.jpg" alt="">
+                <img src="poul-6.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Proof - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Proof that God loves me</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    PROOF THAT GOD LOVES ME
+                    <br><br>
+                    Pour ce travail d’écriture et de mise en page, j’ai voulu travailler sur
+l’érotomanie. Il s’agit d’un trouble psychologique caractérisé par la conviction
+d’être aimé par une personne, le plus souvent célèbre ou inacessible. Au delà
+d’une simple obsession pour un amour non réciproque, c’est une forme de psychose
+paranoïaque classé parmi les délires, qui peut conduire à des comportements
+envahissants comme le harcèlement, la violence et dans certains cas amener au
+meurtre ou au suicide.
+                    <br><br>
+                   Le but avec cet édition était donc de créer une fiction en me mettant à la place
+d’une personne érotomane qui tenterait de rassembler des preuves que l’autre l’aime.
+Un des aspects important dans l’érotomanie est celui de preuves. Il y a un besoin
+constant de confirmer, prouver cet amour supposé en interprétant chaque geste, mot
+ou interaction avec l’objet. J’ai donc utilisé cet aspect là pour mettre en forme
+mon édition, inspiré quelque peu des documents top secret de la police. Je voulais
+un résultat assez brouillon, sens dessus-dessous tout en gardant une cohérence avec
+une trame principale de l’histoire qui se distingue du reste.
+                    <br><br>
+                 Pour ce qui est du titre de mon édition,
+j’ai voulu jouer à mettre en avant le côté
+de «preuves irréfutables» de ce soi-disant
+amour. Aussi, dans l’érotomanie, l’être
+aimé devient une figure presque sacrée,
+un objet de vénération autour duquel
+s’organise toute l’existence.
+C’est une obsession qui prend la forme
+d’un culte. L’individu idéalisé est
+placé sur un piédestal et perçu comme
+exceptionnel et inatteignable, d’où le
+rappel à Dieu.
+                    <br><br>
+                 2025
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="proof-1.jpg" alt="">
+                <img src="proof-2.jpg" alt="">
+                <img src="proof-3.jpg" alt="">
+                <img src="proof-4.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                
+                <img src="proof-5.jpg" alt="">
+                <img src="proof-6.jpg" alt="">
+                <img src="proof-7.jpg" alt="">
+                <img src="proof-8.jpg" alt="">
+                <img src="proof-9.jpg" alt="">
+                <img src="proof-10.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
