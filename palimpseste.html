@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Palimpseste - Mess</title>
+</head>
+
+<body class="projects-page eudoxie-page">
+
+    <div class="top-bar">
+        <h1 id="site-title">AGATHE MESLEM</h1>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle"></div>
+        </nav>
+    </div>
+
+    <main>
+        <section class="hero">
+            <h2 class="hero-text">Palimpseste</h2>
+        </section>
+
+        <!-- ===== ATLAS LAYOUT (TROIS COLONNES) ===== -->
+        <section class="atlas-layout">
+
+            <div class="atlas-left">
+                <p>
+                    PALIMPSESTE
+                    <br><br>
+                    Travail d’édition photographique conçu comme une anthologie personnelle de mes
+images produites entre 2023 et 2025. Ce projet rassemble et recompose un ensemble
+de photographies issues de périodes, de contextes et d’états intérieurs différents,
+réunies au sein d’un ouvrage de 300 pages.
+                    <br><br>
+                   « La photographie ne dit pas ce qui est, mais ce qui a été »
+                    <br><br>
+Ce recueil interroge la mémoire et le besoin de conserver une trace de ce que j’ai
+pu vivre, observer, ressentir ou créer. Les images s’y superposent comme des couches
+fines, des souvenirs qui s’accumulent sans jamais totalement s’effacer.
+Palimpseste se construit comme un espace intime, où chaque photographie devient
+une tentative de fixer un trouble, de rendre visible ce qui glisse, ce qui persiste,
+ce qui se transforme avec le temps.
+                    <br><br>
+                 L’édition est structurée en dix catégories
+photographiques, pensées comme autant
+de portes d’entrée dans cette matière
+mouvante. Certaines accueillent une série
+unique, dense et resserrée.
+D’autres rassemblent plusieurs fragments
+qui dialoguent entre eux, formant un
+ensemble éclaté mais cohérent.
+                    <br><br>
+                 2025
+                </p>
+            </div>
+
+            <div class="atlas-center">
+                <img src="pal-1.jpg" alt="">
+                <img src="pal-2.jpg" alt="">
+                <img src="pal-3.jpg" alt="">
+                <img src="pal-4.jpg" alt="">
+            </div>
+
+            <div class="atlas-right">
+                
+                <img src="pal-5.jpg" alt="">
+                <img src="pal-6.jpg" alt="">
+                <img src="pal-7.jpg" alt="">
+                <img src="pal-8.jpg" alt="">
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="menu-overlay">
+        <div class="menu-close"></div>
+        <ul class="menu-dropdown">
+            <li><a href="index.html">ABOUT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="text.html">TEXT</a></li>
+            <li><a href="galerie.html">GALERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuClose = document.querySelector('.menu-close');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const siteTitle = document.getElementById('site-title');
+
+        menuToggle.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 2) {
+                siteTitle.classList.add('hidden');
+            } else {
+                siteTitle.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>
